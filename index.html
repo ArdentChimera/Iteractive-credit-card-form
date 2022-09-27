@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="leftColorContainer"></div>
+    <div class="formContainer" id="formContainer">
+      <form>
+        <div class="topFormContainer">
+          <label for="cardHolderName">Cardholder Name</label>
+          <input type="text" id="cardHolderName" name="cardHolderName" placeholder="e.g. Jane Appleseed"
+          required/>
+          <span class="errorMessageName" id="errorMessageName">Can't be blank!</span>
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000"
+          maxlength="19" required/>
+          <span class="errorMessageCardNumber" id="errorMessageCardNumber">Can't be blank!</span>
+        </div>
+          <div class="bottomFormContainer">
+            <div class="expDateForm">
+              <label for="expMonth">Exp. Date (MM/YY)</label>
+              <input type="text" class="expMonth" id="expMonthInput" name="expDate" placeholder="MM" maxlength="2" max="12" min="1" required/>
+              <input type="text" class="expYear" id="expYearInput" name="expDate" placeholder="YY"  maxlength="2" required/>
+              <span class="errorMessageExpDate" id="errorMessageExpDate">Can't be blank!</span>
+            </div>
+            <div class="cvcForm">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3" required />
+              <span class="errorMessageCvc" id="errorMessageCvc">Can't be blank!</span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="confirmBtnContainer" id="confirmBtnContainer">
+      <button class="button-27" id="confirm-btn" role="button">Confirm</button>
+    </div>
+  <div class="cardFront">
+      <div class="filledCircle"></div>
+      <div class="emptyCircle"></div>
+      <span class="cardNumberSpan" id="cardNumberSpan">0000 0000 0000 0000</span>
+      <span class="cardHolderSpan" id="cardHolderSpan">Jane Appleseed</span>
+      <span class="expDateSpan" id="expDateSpan"><span id="expMonthSpan">00</span>/<span id="expYearSpan">00</span></span>
+  </div>
+  <div class="cardBack">
+      <span class="cvcSpan" id="cvcSpan">000</span>
+  </div>
+  <!-- Completed state start -->
+  <div class="completedStateLogo" id="completedState">
+    <img class="completedIcon" width="100px" src="/images/icon-complete.svg" />
+    <h2>THANK YOU!</h2>
+    <p>We've added your card details</p>
+  </div>
+    <div class="continueBtn" id="continueBtn">
+      <button class="button-28" role="button">Continue</button>
+    </div>
+ <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/ArdentChimera">Nikolai Petrov</a>.
+    </div>
+  </footer>
+  <script src="/index.js"></script> 
+</body>
+</html>

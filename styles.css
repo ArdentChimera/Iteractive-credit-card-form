@@ -1,0 +1,566 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+}
+
+label {
+    font-weight: 600;
+    color: gray;
+    margin-left: 15px;
+}
+
+input {
+    width: 30em;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, slateblue, coral) border-box;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+
+.leftColorContainer {
+    position: absolute;
+    height: 100vh;
+    width: 31.5%;
+    background-image: url(images/bg-main-desktop.png);
+}
+
+/* Redered Cards */
+
+.cardFront {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-size: cover;
+    background-image: url(images/bg-card-front.png);
+    left: 10em;
+    bottom: 22em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cardBack {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-size: cover;
+    background-image: url(images/bg-card-back.png);
+    left: 15em;
+    bottom: 8em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cardNumberSpan {
+    position: relative;
+    color: whitesmoke;
+    font-size: x-large;
+    top: 1.8em;
+    left: 1.5em;
+}
+
+.cardHolderSpan {
+    position: relative;
+    display: flex;
+    color: whitesmoke;
+    font-size: medium;
+    top: 3.5em;
+    left: 2em;
+}
+
+.expDateSpan {
+    position: relative;
+    display: flex;
+    color: whitesmoke;
+    font-size: medium;
+    left: 18em;
+    top: 2.5em;
+}
+
+.cvcSpan {
+    position: relative;
+    color: whitesmoke;
+    font-size: large;
+    left: 17.8em;
+    top: 5.3em;
+}
+
+.filledCircle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    left: 2em;
+    top: 2em;
+}
+
+.emptyCircle {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    left: 6em;
+    bottom: 0.3em;
+}
+
+/* Form */
+
+.errorMessageName{
+    position: absolute;
+    top: 6.5em;
+    left: 1.2em;
+    color: orangered;
+    font-weight: bold;
+    font-size: smaller;
+    /* Change to Display: "" */
+    display: none;
+
+}
+
+.errorMessageCvc {
+    position: absolute;
+    top: 22em;
+    right: 10em;
+    color: orangered;
+    font-weight: bold;
+    font-size: smaller;
+    /* Change to Display: "" */
+    display: none;
+}
+
+.errorMessageExpDate {
+    position: absolute;
+    top: 22em;
+    right: 24em;
+    color: orangered;
+    font-weight: bold;
+    font-size: smaller;
+    /* Change to Display: "" */
+    display: none;
+}
+
+.errorMessageCardNumber {
+    position: absolute;
+    bottom: 11em;
+    left: 2em;
+    color: orangered;
+    font-weight: bold;
+    font-size: smaller;
+    /* Change to Display: "" */
+    display: none;
+}
+
+#cvc {
+    width: fit-content;
+}
+
+.topFormContainer {
+    width: 18em;
+}
+
+.topFormContainer input {
+    width: 23.5em;
+}
+
+.bottomFormContainer {
+    display: flex;
+    width: 28.5em;
+}
+
+.expDateForm input {
+    width: 3em;
+    text-align: center;
+    margin-bottom: 0;
+    flex-direction: row;
+}
+
+.cvcForm {
+    margin-left: 0;
+}
+
+.confirmBtnContainer {
+    position: absolute;
+    width: 30em;
+    bottom: 8em;
+    left: 50em;
+    /* CHANGE WITH JS */
+    /* display: none; */
+}
+
+.button-27 {
+    appearance: none;
+    background-color: #3A0652;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 28.7em;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.formContainer {
+    position: absolute;
+    width: 30%;
+    left: 50em;
+    bottom: 10em;
+    /* CHANGE WITH JS */
+    /* display: none; */
+}
+
+/* Completed State */
+
+.completedStateLogo {
+    position: absolute;
+    width: 20em;
+    bottom: 20em;
+    left: 56em;
+    text-align: center;
+    font-weight: 600;
+    /* Change with JS */
+    display: none;
+}
+
+.completedStateLogo h2 {
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+
+.completedStateLogo p {
+    color: darkgray;
+    margin-top: 5px;
+}
+
+.continueBtn {
+    position: absolute;
+    width: 18em;
+    bottom: 15em;
+    left: 57.5em;
+    /* change with JS */
+    display: none;
+}
+
+.button-28 {
+    appearance: none;
+    background-color: #3A0652;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 17em;
+    will-change: transform;
+  }
+  
+  .button-28:disabled {
+    pointer-events: none;
+  }
+  
+  .button-28:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  /* Footer */
+
+.attribution {
+    position: absolute;
+    width: 31%;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    bottom: 0.01em;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: mediumslateblue;
+}
+
+.attribution a:hover {
+    color: mediumvioletred;
+}
+
+@media all and (max-width: 380px){
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: white;
+    }
+
+    input {
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: small;
+        border: 2px solid lightgray;
+        border-radius: 10px;
+    }
+
+    label {
+        font-weight: 600;
+        font-size: small;
+        color: gray;
+        margin-left: 8px;
+    }
+
+    .leftColorContainer {
+        background-image: url(/images/bg-main-mobile.png);
+        width: 100%;
+        height: 30%;
+
+    }
+
+    /* render cards */
+
+    .cardFront {
+        position: absolute;
+        width: 280px;
+        height: 150px;
+        background-size: cover;
+        background-image: url(images/bg-card-front.png);
+        left: 1em;
+        bottom: 21em;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        z-index: 2;
+    }
+    
+    .cardBack {
+        position: absolute;
+        width: 280px;
+        height: 150px;
+        background-size: cover;
+        background-image: url(images/bg-card-back.png);
+        left: 4em;
+        bottom: 27em;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        z-index: 1;
+    }
+    
+    .cardNumberSpan {
+        position: relative;
+        color: whitesmoke;
+        font-size: medium;
+        top: 2.6em;
+        left: 2em;
+    }
+    
+    .cardHolderSpan {
+        position: relative;
+        display: flex;
+        color: whitesmoke;
+        font-size: small;
+        top: 4em;
+        left: 2.3em;
+    }
+    
+    .expDateSpan {
+        position: relative;
+        color: whitesmoke;
+        font-size: small;
+        left: 15em;
+        top: 2.5em;
+    }
+    
+    .cvcSpan {
+        position: relative;
+        color: whitesmoke;
+        font-size: medium;
+        left: 13.7em;
+        top: 4.1em;
+    }
+    
+    .filledCircle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-color: whitesmoke;
+        border-radius: 50%;
+        left: 2em;
+        top: 2em;
+    }
+    
+    .emptyCircle {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        border: 2px solid whitesmoke;
+        border-radius: 50%;
+        left: 4.5em;
+        top: 0.5em;
+    }
+
+    /* Form */
+
+    .formContainer {
+        position: absolute;
+        width: 10%;
+        left: 1em;
+        top: 22em;
+        /* CHANGE WITH JS */
+        /* display: none; */
+    }
+
+
+.topFormContainer {
+    width: 18em;
+}
+
+.topFormContainer input {
+    width: 22.7em;
+}
+
+.bottomFormContainer {
+    display: flex;
+    width: 20em;
+}
+
+.expDateForm input {
+    flex-direction: row;
+}
+
+.cvcForm input{
+    margin-left: 0;
+}
+
+.confirmBtnContainer {
+    position: absolute;
+    top: 37em;
+    left: 1em;
+    /* CHANGE WITH JS */
+    /* display: none; */
+}
+
+.button-27 {
+    appearance: none;
+    background-color: #3A0652;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20em;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  /* Footer */
+
+  .attribution {
+    display: none;
+    position: absolute;
+    font-size: x-small;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    bottom: 0.01em;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: mediumslateblue;
+}
+
+.attribution a:hover {
+    color: mediumvioletred;
+}
+
+}
